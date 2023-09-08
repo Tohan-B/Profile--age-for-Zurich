@@ -7,37 +7,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="left-grid">
-      <p data-testid="currentDayOfTheWeek">Monday</p>
-      <p data-testid="currentUTCTime"></p>
+    <div class="container">
+      <div class="profile">
+        <img
+          src="images/20221222_140739.jpg"
+          alt="Itohan's Profile"
+          data-testid="slackDisplayImage"
+          class="profile_img"
+        />
 
-      <!-- Slack Name -->
-      <p data-testid="slackUserName">Your Slack Name</p>
+        <div class="about">
+          <h1 data-testid="slackUserName">Itohan</h1>
+          <p data-testid="myTrack">Frontend</p>
+        </div>
 
-      <!-- Current Day of the Week -->
+        <div class="time-container">
+          <div class="time">
+            <h3 data-testid="currentDayOfTheWeek"></h3>
+            <h3 data-testid="currentUTCTime"></h3>
+          </div>
 
-      <!-- Track -->
-      <p data-testid="myTrack">Frontend</p>
-
-      <!-- GitHub URL -->
-      <a
-        href="https://github.com/yourusername/your-repo"
-        data-testid="githubURL"
-        >GitHub Repository</a
-      >
+          <a
+            href="https://github.com/yourusername/your-repo"
+            data-testid="githubURL"
+            >GitHub Repository</a
+          >
+        </div>
+      </div>
     </div>
-
-    <div class="right-grid">
-      <!-- Slack Display Picture -->
-      <img
-        src="images/20221222_140739.jpg"
-        alt="Your Slack Name"
-        data-testid="slackDisplayImage"
-      />
-
-      <!-- Current UTC Time -->
-    </div>
-
     <script src="index.js"></script>
   </body>
 </html>
