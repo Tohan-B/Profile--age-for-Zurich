@@ -1,0 +1,27 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Left Grid */
+.left-grid {
+  padding: 20px;
+  margin-top: 150px;
+
+  margin-left: 350px;
+  text-align: center;
+}
+
+/* Right Grid */
+.right-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+.right-grid img {
+  max-width: 100%;
+  max-height: auto;
+}
