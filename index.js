@@ -1,33 +1,27 @@
 const currentUTCTimeElement = document.querySelector(
   '[data-testid="currentUTCTime"]'
 );
-const currentUTCTime = new Date().getTime();
-currentUTCTimeElement.textContent = currentUTCTime;
 
-// Get a reference to the element with the data-testid attribute "currentDayOfTheWeek"
-let currentDayOfTheWeekElement = document.querySelector(
-  '[data-testid="currentDayOfTheWeek"]'
-);
+const currentUTCTimeMilliseconds = new Date().getTime();
 
-// Create an array to map day indices to day names
-const daysOfWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+currentUTCTimeElement.textContent = currentUTCTimeMilliseconds;
 
-// Get the current date
-const currentDate = new Date();
+function formatDay(date) {
+  let dayWeek = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[dayWeek];
 
-// Get the day of the week as an index (0 for Sunday, 1 for Monday, etc.)
-const dayIndex = currentDate.getDay();
+  return day;
+}
 
-// Get the name of the day of the week using the array
-const currentDay = daysOfWeek[dayIndex];
-
-// Update the element's text content with the current day
-currentDayOfTheWeekElement.textContent = `It's ${currentDay}`;
+let dateElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+let currentTime = new Date();
+dateElement.textContent = formatDay(currentTime);

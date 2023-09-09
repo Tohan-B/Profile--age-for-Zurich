@@ -43,9 +43,15 @@ a {
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
+/* Change background color and opacity on hover */
+a:hover {
+  background-color: #1a9d87;
+  color: #000;
+  opacity: 0.8;
+}
 .container {
   display: flex;
   justify-content: center;
